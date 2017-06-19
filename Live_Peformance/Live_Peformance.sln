@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "Live_Peformance\GUI.csproj", "{76CAB2F3-0162-4225-BEAE-46EF34CEF9D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models_DAL", "Models_DAL\Models_DAL.csproj", "{7745DCAB-E128-4A28-9565-BFBF7397E244}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business_Data_Layers", "Models_DAL\Business_Data_Layers.csproj", "{7745DCAB-E128-4A28-9565-BFBF7397E244}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
