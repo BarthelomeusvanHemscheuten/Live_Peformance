@@ -82,32 +82,6 @@
       </propertyInstances>
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="80106c6f-9c5e-421c-98a6-b28e57ba9a33">
-      <profileInstance Id="63f07815-3ec1-4d64-9bec-0f875c0127cb" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="5c180891-9cf1-4bb7-b32b-8fdb7fb0967a">
-      <profileInstance Id="9210980e-11e9-4219-a081-c649f01d756d" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="ee3e26a0-185e-4a81-b2b6-c03d7740ea3e">
-      <profileInstance Id="9a7df277-ec5a-4c99-bf3b-ca59a17de131" name="CSharpProfile">
-        <elementDefinition Id="ec34f6e0-5353-421d-a833-94da39c45544" />
-      </profileInstance>
-      <elementDefinition Id="fb90ca38-9b67-4836-883f-4a7a22cd134a" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="f70884b5-8693-4490-b7d6-3255c5be30b6">
-      <profileInstance Id="039cce49-95df-4ba9-ba0e-ef0ad82e605e" name="TextTemplateBindings">
-        <elementDefinition Id="964a2ea3-bebc-406f-965a-e9d6a58de11a" />
-      </profileInstance>
-      <elementDefinition Id="bab67dc9-45af-458e-ac06-0531ddc377e2" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="1117b17b-ab42-4faf-a505-87f5b81d3b10" name="Coalition" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -161,7 +135,7 @@
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="3e8d606b-cb46-4dd7-af3f-6af10ce4cbbf" name="Upper" value=".N">
+                    <literalString Id="3e8d606b-cb46-4dd7-af3f-6af10ce4cbbf" name="Upper" value=".*">
                       <elementDefinition Id="f9fd8ea6-54da-4d8a-8e1b-1eaf1fc70596" />
                     </literalString>
                   </upperValueInternal>
@@ -938,6 +912,12 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="d4d66ca0-9ff9-41d1-aa20-c5fd280f83ef" />
+        <suppliersInternal>
+          <dependency Id="197a7822-909b-4127-b90c-c92054dac4c4">
+            <interfaceMoniker Id="2babd741-7980-4a8c-afe7-a6ad9d7afaf4" LastKnownName="IComparer" />
+            <elementDefinition Id="9e9842e3-3562-42da-a3a3-77fc2b7d2cbe" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="38245b14-fc55-4f18-afb2-9f8ad5de10b2" name="BeginDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <appliedStereotypesInternal>
@@ -2046,7 +2026,7 @@
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="1f2343c5-7d5a-44a2-98b1-a2072ccef4db" name="Upper" value=".N">
+                    <literalString Id="1f2343c5-7d5a-44a2-98b1-a2072ccef4db" name="Upper" value=".*">
                       <elementDefinition Id="76398079-6f60-48de-b5ae-f35e3de5e29c" />
                     </literalString>
                   </upperValueInternal>
@@ -2401,6 +2381,12 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="87e5a55c-fcab-4d3b-9bd5-826fe3b027f0" />
+        <suppliersInternal>
+          <dependency Id="f809e042-a0c1-4048-bb11-86d30e055b33">
+            <interfaceMoniker Id="2babd741-7980-4a8c-afe7-a6ad9d7afaf4" LastKnownName="IComparer" />
+            <elementDefinition Id="9f8a6fda-3276-4684-b842-8dbf59c5f04d" />
+          </dependency>
+        </suppliersInternal>
         <targetEnds>
           <association Id="53dc7794-6123-4046-bb8c-1ee2bfcd36dd" isDerived="false" sourceEndRoleName="Party" targetEndRoleName="Ellection" isLeaf="false" isAbstract="false">
             <classMoniker Id="6026c452-eee3-43cd-98a5-1f34f525a42e" LastKnownName="Ellection" />
@@ -2408,12 +2394,12 @@
               <associationHasOwnedEnds>
                 <memberEnd Id="9e1af733-ff32-4800-9e02-575a770b53c7" name="Party" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <lowerValueInternal>
-                    <literalString Id="bbf7b0ff-e269-4c04-9b55-47632a535a3c" name="Lower" value="N">
+                    <literalString Id="bbf7b0ff-e269-4c04-9b55-47632a535a3c" name="Lower" value="*">
                       <elementDefinition Id="da039e20-4b94-4dc6-87ab-df906549d4ea" />
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="3be3d089-0992-47d8-b8a7-fa5c02cd3fa8" name="Upper" value="N">
+                    <literalString Id="3be3d089-0992-47d8-b8a7-fa5c02cd3fa8" name="Upper" value="*">
                       <elementDefinition Id="0ab9d185-da4f-456b-b1aa-57c6845ea93e" />
                     </literalString>
                   </upperValueInternal>
@@ -2428,7 +2414,7 @@
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="9b4ed03a-7242-40b3-901e-c6f8711b8365" name="Upper" value=".N">
+                    <literalString Id="9b4ed03a-7242-40b3-901e-c6f8711b8365" name="Upper" value=".*">
                       <elementDefinition Id="40a86ef9-362b-40cf-95fb-b38fa4ac1bd2" />
                     </literalString>
                   </upperValueInternal>
@@ -2444,12 +2430,12 @@
               <associationHasOwnedEnds>
                 <memberEnd Id="4f63f614-2ea9-4cf3-9e44-fca0016cb901" name="Party" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
                   <lowerValueInternal>
-                    <literalString Id="300f3cb4-29d9-4dc9-a0bf-99ad067a09e8" name="Lower" value="N">
+                    <literalString Id="300f3cb4-29d9-4dc9-a0bf-99ad067a09e8" name="Lower" value="*">
                       <elementDefinition Id="4f8f8035-0978-47bb-ae7e-cf36d6e0e076" />
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="9f708a2b-bec0-4711-8927-11284d12acb9" name="Upper" value="N">
+                    <literalString Id="9f708a2b-bec0-4711-8927-11284d12acb9" name="Upper" value="*">
                       <elementDefinition Id="a2a2976f-aa15-4248-a64c-3f3a19baf298" />
                     </literalString>
                   </upperValueInternal>
@@ -2464,7 +2450,7 @@
                     </literalString>
                   </lowerValueInternal>
                   <upperValueInternal>
-                    <literalString Id="0ca03b81-67b2-4fcb-a338-e7aca7bef967" name="Upper" value=".N">
+                    <literalString Id="0ca03b81-67b2-4fcb-a338-e7aca7bef967" name="Upper" value=".*">
                       <elementDefinition Id="1bcce0ba-df57-4bb4-9386-4b988e0010ab" />
                     </literalString>
                   </upperValueInternal>
@@ -2778,6 +2764,32 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="f31cec7b-0d3d-4f86-9cfc-21ce78755a7d" name="SetID" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="98c97346-86e5-4b2b-980f-e36cf11f5a65" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="15ae2c4c-606a-4e2f-9712-5552169d690f" name="id" direction="In" isUnique="false">
+                  <elementDefinition Id="580611ed-c369-4d07-9604-14c2c47af617" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b7610f41-d9e0-49b0-968e-f92962b4deaf" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="77f6a7e7-b554-4e45-90f6-0bd39ae3b287" name="SetVotes" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d835328c-4d00-4f27-9873-624cc4acee41" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1b17d870-f498-4b66-b218-5362f91000a0" name="votes" direction="In" isUnique="false">
+                  <elementDefinition Id="ee12dca5-46c4-4344-b321-b44c92472e4e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b7610f41-d9e0-49b0-968e-f92962b4deaf" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -2806,8 +2818,39 @@
         <elementDefinition Id="2b9e64ee-b06d-4ced-957a-653666a17d56" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="2babd741-7980-4a8c-afe7-a6ad9d7afaf4" name="IComparer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="eb8a8aa1-df9a-4ce6-a00a-2199b5e7f726" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="7cea76e0-ffae-4983-a17c-84404165705e" name="Class_Diagram">
     <elementDefinition Id="7aac0f25-b374-4cd3-bfb0-1c5135d24361" />
+    <profileInstances>
+      <packageHasProfileInstances Id="80106c6f-9c5e-421c-98a6-b28e57ba9a33">
+        <profileInstance Id="63f07815-3ec1-4d64-9bec-0f875c0127cb" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="5c180891-9cf1-4bb7-b32b-8fdb7fb0967a">
+        <profileInstance Id="9210980e-11e9-4219-a081-c649f01d756d" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ee3e26a0-185e-4a81-b2b6-c03d7740ea3e">
+        <profileInstance Id="9a7df277-ec5a-4c99-bf3b-ca59a17de131" name="CSharpProfile">
+          <elementDefinition Id="ec34f6e0-5353-421d-a833-94da39c45544" />
+        </profileInstance>
+        <elementDefinition Id="fb90ca38-9b67-4836-883f-4a7a22cd134a" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f70884b5-8693-4490-b7d6-3255c5be30b6">
+        <profileInstance Id="039cce49-95df-4ba9-ba0e-ef0ad82e605e" name="TextTemplateBindings">
+          <elementDefinition Id="964a2ea3-bebc-406f-965a-e9d6a58de11a" />
+        </profileInstance>
+        <elementDefinition Id="bab67dc9-45af-458e-ac06-0531ddc377e2" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

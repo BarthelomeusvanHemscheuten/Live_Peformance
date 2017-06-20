@@ -207,7 +207,7 @@
                     <literalString
                       Id="f9fd8ea6-54da-4d8a-8e1b-1eaf1fc70596"
                       name="Upper"
-                      value=".N" />
+                      value=".*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -1225,6 +1225,15 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="9e9842e3-3562-42da-a3a3-77fc2b7d2cbe">
+            <interfaceMoniker
+              Id="eb8a8aa1-df9a-4ce6-a00a-2199b5e7f726"
+              LastKnownName="IComparer"
+              LastKnownLocation="Class_Diagram.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property
             Id="d4022ca1-5680-4d99-8b3a-789ccc98089e"
@@ -2759,7 +2768,7 @@
                     <literalString
                       Id="76398079-6f60-48de-b5ae-f35e3de5e29c"
                       name="Upper"
-                      value=".N" />
+                      value=".*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -3235,6 +3244,15 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="9f8a6fda-3276-4684-b842-8dbf59c5f04d">
+            <interfaceMoniker
+              Id="eb8a8aa1-df9a-4ce6-a00a-2199b5e7f726"
+              LastKnownName="IComparer"
+              LastKnownLocation="Class_Diagram.uml" />
+          </dependency>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="626cc15e-6d18-4ca4-af70-6f505db11e86"
@@ -3264,13 +3282,13 @@
                     <literalString
                       Id="da039e20-4b94-4dc6-87ab-df906549d4ea"
                       name="Lower"
-                      value="N" />
+                      value="*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="0ab9d185-da4f-456b-b1aa-57c6845ea93e"
                       name="Upper"
-                      value="N" />
+                      value="*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -3295,7 +3313,7 @@
                     <literalString
                       Id="40a86ef9-362b-40cf-95fb-b38fa4ac1bd2"
                       name="Upper"
-                      value=".N" />
+                      value=".*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -3329,13 +3347,13 @@
                     <literalString
                       Id="4f8f8035-0978-47bb-ae7e-cf36d6e0e076"
                       name="Lower"
-                      value="N" />
+                      value="*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="a2a2976f-aa15-4248-a64c-3f3a19baf298"
                       name="Upper"
-                      value="N" />
+                      value="*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -3360,7 +3378,7 @@
                     <literalString
                       Id="1bcce0ba-df57-4bb4-9386-4b988e0010ab"
                       name="Upper"
-                      value=".N" />
+                      value=".*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -3786,6 +3804,56 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="98c97346-86e5-4b2b-980f-e36cf11f5a65"
+            name="SetID"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="580611ed-c369-4d07-9604-14c2c47af617"
+                  name="id"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Class_Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d835328c-4d00-4f27-9873-624cc4acee41"
+            name="SetVotes"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ee12dca5-46c4-4344-b321-b44c92472e4e"
+                  name="votes"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Class_Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -3808,6 +3876,13 @@
       <undefinedType
         Id="2b9e64ee-b06d-4ced-957a-653666a17d56"
         name="List&lt;Result&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="eb8a8aa1-df9a-4ce6-a00a-2199b5e7f726"
+        name="IComparer"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

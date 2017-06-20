@@ -8,7 +8,7 @@ namespace Business_Data_Layers.Data_Access_Layer.DatabaseConnections
 {
     public class DatabaseConnection
     {
-        private string connectionString = @"";
+        private string connectionString = @"Data Source=mssql.fhict.local;Persist Security Info=True;User ID=dbi366985;Password=ilhgddds";
 
         public int Create(string query)
         {
