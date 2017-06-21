@@ -7,12 +7,8 @@ using Business_Data_Layers.Data_Access_Layer.Percistencies;
 
 namespace Business_Data_Layers.Business_Logic_Layer.Workflow_Components.Repositories
 {
-    public class EllectionRepository
+    class CoalitionRepository
     {
-        IEllection context = new EllectionPercistency();
-        public List<Ellection> GetAllEllections()
-        {
-            return context.GetAllEllections();
-        }
+       ICoalition context = new CoalitionPercistency();
     }
 }

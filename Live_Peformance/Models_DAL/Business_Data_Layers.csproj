@@ -45,19 +45,27 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business Logic Layer\Application Façade\MainFacade.cs" />
+    <Compile Include="Business Logic Layer\Workflow Components\Repositories\CoalitionRepository.cs" />
     <Compile Include="Business Logic Layer\Workflow Components\Repositories\EllectionRepository.cs" />
+    <Compile Include="Business Logic Layer\Workflow Components\Repositories\PartyRepository.cs" />
+    <Compile Include="Business Logic Layer\Workflow Components\Repositories\ResultRepository.cs" />
     <Compile Include="Business Logic Layer\Workflow Entities\Classes\Coalition.cs" />
     <Compile Include="Business Logic Layer\Workflow Entities\Classes\Ellection.cs" />
     <Compile Include="Business Logic Layer\Workflow Entities\Classes\Party.cs" />
     <Compile Include="Business Logic Layer\Workflow Entities\Classes\Result.cs" />
     <Compile Include="Data Access Layer\DatabaseConnections\DatabaseConnection.cs" />
+    <Compile Include="Data Access Layer\Interfaces\ICoalition.cs" />
     <Compile Include="Data Access Layer\Interfaces\IEllection.cs" />
+    <Compile Include="Data Access Layer\Interfaces\IParty.cs" />
+    <Compile Include="Data Access Layer\Interfaces\IResult.cs" />
+    <Compile Include="Data Access Layer\Percistencies\CoalitionPercistency.cs" />
     <Compile Include="Data Access Layer\Percistencies\EllectionPercistency.cs" />
+    <Compile Include="Data Access Layer\Percistencies\PartyPercistency.cs" />
+    <Compile Include="Data Access Layer\Percistencies\ResultPercistency.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business Logic Layer\Application Façade\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

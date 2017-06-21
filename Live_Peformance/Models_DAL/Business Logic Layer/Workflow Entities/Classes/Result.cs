@@ -11,39 +11,23 @@ using System.Text;
 
 public class Result
 {
-	public virtual int ID
-	{
-		get;
-		set;
-	}
+	public int ID{get;set;}
 
-	public virtual string Name
-	{
-		get;
-		set;
-	}
+	public string Name{get;set;}
+    public Ellection ellection { get; set; }
 
-	public virtual List<Party> parties
-	{
-		get;
-		set;
-	}
-
-	public virtual Ellection ellection
-	{
-		get;
-		set;
-	}
-
-	public virtual bool AddParties(List<Party> parties)
-	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual bool ChangeResult(List<Party> parties)
-	{
-		throw new System.NotImplementedException();
-	}
+    public Result(string name)
+    {
+        Name = name;
+    }
+    public void SetID(int id)
+    {
+        ID = id;
+    }
+    public void SetEllection(Ellection ellection)
+    {
+        this.ellection = ellection;
+    }
 
 }
 
