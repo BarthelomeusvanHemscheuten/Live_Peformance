@@ -70,11 +70,7 @@ namespace Business_Data_Layers.Data_Access_Layer.DatabaseConnections
                     SqlCommand command = new SqlCommand(query, connection);
 
                     Console.WriteLine("Scaler executed.");
-                    if (command.ExecuteNonQuery() != 0)
-                    {
-                        return true;
-                    }
-                    return false;
+                    return command.ExecuteNonQuery() != 0;
                 }
             }
             catch (Exception exception)
@@ -92,7 +88,7 @@ namespace Business_Data_Layers.Data_Access_Layer.DatabaseConnections
                     connection.Open();
                     SqlCommand command = new SqlCommand(query, connection);
 
-                    return (bool)(command.ExecuteScalar());
+                    return command.ExecuteNonQuery() != 0;
                 }
             }
             catch (Exception exception)
@@ -111,8 +107,8 @@ namespace Business_Data_Layers.Data_Access_Layer.DatabaseConnections
                     connection.Open();
                     SqlCommand command = new SqlCommand(procedure, connection);
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue(parametername1, value1);
-                    command.Parameters.AddWithValue(parametername2, value2);
+                    command.Parameters.Add(new SqlParameter(parametername1, value1));
+                    command.Parameters.Add(new SqlParameter(parametername2, value2));
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {

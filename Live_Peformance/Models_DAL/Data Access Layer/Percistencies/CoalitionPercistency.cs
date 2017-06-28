@@ -48,52 +48,17 @@ namespace Business_Data_Layers.Data_Access_Layer.Percistencies
             return DatabaseConnection.Update(query);
         }
 
-        public List<Coalition> GetAllCoalitions()
-        {
-            string query = @"SELECT c.ID, c.Premier, c.Naam, v.ID, v.BeginDatum, v.EindDatum, v.Lopend, v.Zetels, v.Soort, v.Naam, u.ID, u.Naam FROM [Coalitie] c 
-                             INNER JOIN [Uitslag] u ON c.Uitslag_ID = u.ID
-							 INNER JOIN [Verkiezing] v ON u.Verkiezing_ID = v.ID";
-            List<Coalition> coalitions = new List<Coalition>();
-            foreach(object[] data in DatabaseConnection.Read(query))
-            {
-                Coalition coalition = new Coalition((string)data[1], (string)data[2]);
-                coalition.SetID((int)data[0]);
-                Result result = new Result((string)data[11]);
-                result.SetID((int)data[10]);
-                Ellection ellection = new Ellection((DateTime)data[4], (DateTime)data[5], (bool)data[6], (int)data[7], (string)data[8], (string)data[9]);
-                ellection.SetID((int)data[3]);
-                List<Party> parties = new List<Party>();
-                foreach(object[] p_data in DatabaseConnection.StoredProcedure("GetParties", "@coalitionID", "@ellectionID", (int)data[0], 0))
-                {
-                    Party party = new Party((string)data[1], (string)data[2]);
-                    party.SetID((int)data[0]);
-                    parties.Add(party);
-                }
-                coalition.SetParties(parties);
-                result.SetEllection(ellection);
-                coalition.SetResult(result);
-            }
-            return coalitions;
-        }
 
-        public List<Coalition> GetCoalitionsFromEllection(int ellection_id)
+        public List<Coalition> GetCoalitionsFromResult(int result_id)
         {
-            string query = @"SELECT c.ID, c.Premier, c.Naam, v.ID, v.BeginDatum, v.EindDatum, v.Lopend, v.Zetels, v.Soort, v.Naam, u.ID, u.Naam FROM [Coalitie] c 
-                             INNER JOIN [Uitslag] u ON c.Uitslag_ID = u.ID
-							 INNER JOIN [Verkiezing] v ON u.Verkiezing_ID = v.ID where v.ID = @id";
-            query = query.Replace("@id", ellection_id.ToString());
+            string query = @"SELECT * FROM [Coalitie] WHERE [Uitslag_ID] = @id";
+            query = query.Replace("@id", result_id.ToString());
             List<Coalition> coalitions = new List<Coalition>();
             foreach (object[] data in DatabaseConnection.Read(query))
             {
                 Coalition coalition = new Coalition((string)data[1], (string)data[2]);
                 coalition.SetID((int)data[0]);
-                Result result = new Result((string)data[11]);
-                result.SetID((int)data[10]);
-                Ellection ellection = new Ellection((DateTime)data[4], (DateTime)data[5], (bool)data[6], (int)data[7], (string)data[8], (string)data[9]);
-                ellection.SetID((int)data[3]);
-
-                result.SetEllection(ellection);
-                coalition.SetResult(result);
+                coalitions.Add(coalition);
             }
             return coalitions;
         }

@@ -838,12 +838,6 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="d4d66ca0-9ff9-41d1-aa20-c5fd280f83ef" />
-        <suppliersInternal>
-          <dependency Id="197a7822-909b-4127-b90c-c92054dac4c4">
-            <interfaceMoniker Id="2babd741-7980-4a8c-afe7-a6ad9d7afaf4" LastKnownName="IComparer" />
-            <elementDefinition Id="9e9842e3-3562-42da-a3a3-77fc2b7d2cbe" />
-          </dependency>
-        </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="38245b14-fc55-4f18-afb2-9f8ad5de10b2" name="BeginDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <appliedStereotypesInternal>
@@ -2087,12 +2081,6 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="87e5a55c-fcab-4d3b-9bd5-826fe3b027f0" />
-        <suppliersInternal>
-          <dependency Id="f809e042-a0c1-4048-bb11-86d30e055b33">
-            <interfaceMoniker Id="2babd741-7980-4a8c-afe7-a6ad9d7afaf4" LastKnownName="IComparer" />
-            <elementDefinition Id="9f8a6fda-3276-4684-b842-8dbf59c5f04d" />
-          </dependency>
-        </suppliersInternal>
         <targetEnds>
           <association Id="53dc7794-6123-4046-bb8c-1ee2bfcd36dd" isDerived="false" sourceEndRoleName="Party" targetEndRoleName="Ellection" isLeaf="false" isAbstract="false">
             <classMoniker Id="6026c452-eee3-43cd-98a5-1f34f525a42e" LastKnownName="Ellection" />
@@ -2478,11 +2466,6 @@
         <elementDefinition Id="af901ac8-9c19-467f-a25e-5582251a11cb" />
       </referencedType>
     </packageHasNamedElement>
-    <logicalClassDesignerModelHasTypes>
-      <Interface Id="2babd741-7980-4a8c-afe7-a6ad9d7afaf4" name="IComparer" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="eb8a8aa1-df9a-4ce6-a00a-2199b5e7f726" />
-      </Interface>
-    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="7cea76e0-ffae-4983-a17c-84404165705e" name="Class_Diagram">
     <elementDefinition Id="7aac0f25-b374-4cd3-bfb0-1c5135d24361" />

@@ -14,5 +14,18 @@ namespace Business_Data_Layers.Business_Logic_Layer.Workflow_Components.Reposito
         {
             return context.GetAllEllections();
         }
+        public int CreateEllection(Ellection ellection)
+        {
+            return context.AddEllection(ellection);
+        }
+        public bool UpdateEllection(Ellection ellection)
+        {
+            return context.EditEllection(ellection);
+        }
+        public bool DeleteEllectoin(int ellection_id)
+        {
+            return context.DeleteEllection(ellection_id);
+        }
+
     }
 }

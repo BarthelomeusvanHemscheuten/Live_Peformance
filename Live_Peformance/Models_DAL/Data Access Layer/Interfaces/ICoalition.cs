@@ -7,8 +7,7 @@ namespace Business_Data_Layers.Data_Access_Layer.Interfaces
 {
     interface ICoalition
     {
-        List<Coalition> GetAllCoalitions();
-        List<Coalition> GetCoalitionsFromEllection(int election_id);
+        List<Coalition> GetCoalitionsFromResult(int result_id);
         bool DeletePartyFromCoalition(int party_id, int coalition_id);
         bool AddPartyFromCoalition(int party_id, int coalition_id);
         int AddCoalition(Coalition coalition);

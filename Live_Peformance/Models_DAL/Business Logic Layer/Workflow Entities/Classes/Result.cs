@@ -28,6 +28,10 @@ public class Result
     {
         this.ellection = ellection;
     }
+    public override string ToString()
+    {
+        return Name;
+    }
 
 }
 
