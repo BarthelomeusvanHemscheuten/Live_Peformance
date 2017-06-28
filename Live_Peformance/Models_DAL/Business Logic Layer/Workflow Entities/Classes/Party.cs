@@ -10,6 +10,7 @@ public class Party
 
     public int Votes { get; set; }
 
+    public int Seats { get; set; }
     public string Name { get; set; }
 
     public string Represenitive { get; set; }
@@ -32,6 +33,14 @@ public class Party
     public void SetVotes(int votes)
     {
         Votes = votes;
+    }
+    public void SetSeats(int seats)
+    {
+
+    }
+    public override string ToString()
+    {
+        return Name + "________" + Represenitive + "______" + Votes.ToString();
     }
 
 }

@@ -11,7 +11,14 @@ namespace Business_Data_Layers.Data_Access_Layer.Percistencies
     {
         public int AddEllection(Ellection ellection)
         {
-            throw new NotImplementedException();
+            string query = @"INSERT INTO [Verkiezing](BeginDatum, EindDatum, Lopend, Zetels, Soort, Naam) VALUES ('@begin', '@end', '@running', @seats, '@kind', '@name')";
+            query = query.Replace("@begin", ellection.BeginDate.Date.ToString())
+                .Replace("@end", ellection.EndDate.Date.ToString())
+                .Replace("@running", ellection.Running.ToString())
+                .Replace("@seats", ellection.Seats.ToString())
+                .Replace("@kind", ellection.Kind)
+                .Replace("@name", ellection.Name);
+            return DatabaseConnection.Create(query);
         }
 
         public bool AddResult(Result result)
@@ -26,12 +33,22 @@ namespace Business_Data_Layers.Data_Access_Layer.Percistencies
 
         public bool DeleteEllection(int ellection_id)
         {
-            throw new NotImplementedException();
+            string query = @"DELETE FROM [Verkiezing] WHERE [ID] = @id";
+            query = query.Replace("@id", ellection_id.ToString());
+            return DatabaseConnection.Delete(query);
         }
 
         public bool EditEllection(Ellection ellection)
         {
-            throw new NotImplementedException();
+            string query = @"UPDATE [Verkiezing] SET BeginDatum = '@begin', EindDatum = '@end', Lopend = '@running', Zetels = '@seats', Soort = '@kind', Naam = '@name' WHERE ID = @id ";
+            query = query.Replace("@begin", ellection.BeginDate.Date.ToString())
+                .Replace("@end", ellection.EndDate.Date.ToString())
+                .Replace("@running", ellection.Running.ToString())
+                .Replace("@seats", ellection.Seats.ToString())
+                .Replace("@kind", ellection.Kind)
+                .Replace("@name", ellection.Name)
+                .Replace("@id", ellection.ID.ToString());
+            return DatabaseConnection.Update(query);
         }
 
         public List<Ellection> GetAllEllections()

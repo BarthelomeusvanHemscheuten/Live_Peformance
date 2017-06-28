@@ -7,21 +7,37 @@ using Business_Data_Layers.Business_Logic_Layer.Workflow_Components.Repositories
 public class Coalition
 {
     CoalitionRepository repo = new CoalitionRepository();
-
+    PartyRepository partyrepo = new PartyRepository();
     //Properties
+    List<Party> parites;
     public int ID { get; set; }
 
     public string Name { get; set; }
 
     public string Premier { get; set; }
 
-    public List<Party> parties { get; set; }
+    public List<Party> parties
+    {
+        get
+        {
+            parties = partyrepo.GetPartiesFromCoalition(ID);
+            return parties;
+        }
+        set
+        {
+            parties = value;
+        }
+    }
     public Result result { get; set; }
 
     public int Seats { get; set; }
 
     //Constructors
-    public Coalition(string premier, string name)
+    public Coalition(string name)
+    {
+        Name = name;
+    }
+    public Coalition(string name, string premier)
     {
         Name = name;
         Premier = premier;
@@ -49,14 +65,25 @@ public class Coalition
         parties = Parties;
     }
 
-    public string CalculatePremier()
+    public void CalculatePremier()
     {
-        throw new System.NotImplementedException();
+        Party party = parties.OrderByDescending(p => p.Votes).FirstOrDefault();
+        Premier = party.Represenitive;
     }
 
-    public int CalculateSeats()
+    public void CalculateSeats(int max_seats)
     {
-        throw new System.NotImplementedException();
+        int seats = 0;
+        int all_votes = 0;
+        foreach(Party party in parties)
+        {
+            all_votes += party.Votes;
+        }
+        foreach(Party party in parties)
+        {
+            seats = (all_votes / party.Votes) * 150;
+        }
+        Seats = seats;
     }
 
 }

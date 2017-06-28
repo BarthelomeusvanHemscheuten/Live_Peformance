@@ -9,9 +9,7 @@ public class Ellection
     EllectionRepository repo = new EllectionRepository();
     //Properties
     public DateTime BeginDate { get; set; }
-
     public DateTime EndDate { get; set; }
-
     public int ID { get; set; }
 
     public bool Running { get; set; }
@@ -23,9 +21,9 @@ public class Ellection
     public string Name { get; set; }
 
     //Constructors
-    public Ellection(DateTime beginDatum, DateTime endDate, bool running, int seats, string kind, string name)
+    public Ellection(DateTime beginDate, DateTime endDate, bool running, int seats, string kind, string name)
     {
-        BeginDate = BeginDate;
+        BeginDate = beginDate;
         EndDate = endDate;
         Running = running;
         Seats = seats;
@@ -69,6 +67,10 @@ public class Ellection
     public bool SetResult(Result Result)
     {
         throw new System.NotImplementedException();
+    }
+    public override string ToString()
+    {
+        return Name;
     }
 
 }

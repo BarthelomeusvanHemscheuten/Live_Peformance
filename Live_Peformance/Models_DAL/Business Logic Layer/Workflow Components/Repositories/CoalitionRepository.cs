@@ -10,5 +10,17 @@ namespace Business_Data_Layers.Business_Logic_Layer.Workflow_Components.Reposito
     class CoalitionRepository
     {
        ICoalition context = new CoalitionPercistency();
+        public List<Coalition> GetCoalitionFromResult(int result_id)
+        {
+            return context.GetCoalitionsFromResult(result_id);
+        }
+        public bool CreateCoalition(Coalition coalition)
+        {
+            return context.AddCoalition(coalition) != -1;
+        }
+        public bool AddClasstoCoalition(Coalition coaltion, Party party)
+        {
+            return context.AddPartyFromCoalition(party.ID, coaltion.ID);
+        }
     }
 }

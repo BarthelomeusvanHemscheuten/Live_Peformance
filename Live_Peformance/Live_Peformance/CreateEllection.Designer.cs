@@ -42,11 +42,13 @@
             this.rbFalse = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dtpBegin
             // 
             this.dtpBegin.Location = new System.Drawing.Point(81, 171);
+            this.dtpBegin.MinDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.dtpBegin.Name = "dtpBegin";
             this.dtpBegin.Size = new System.Drawing.Size(200, 22);
             this.dtpBegin.TabIndex = 0;
@@ -157,7 +159,7 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(109, 294);
+            this.btnCreate.Location = new System.Drawing.Point(19, 298);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(123, 42);
             this.btnCreate.TabIndex = 13;
@@ -165,11 +167,22 @@
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(158, 298);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(151, 42);
+            this.btnEdit.TabIndex = 14;
+            this.btnEdit.Text = "Pas Verkiezing aan";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // CreateEllection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 352);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.rbFalse);
@@ -207,5 +220,6 @@
         private System.Windows.Forms.RadioButton rbFalse;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Button btnEdit;
     }
 }

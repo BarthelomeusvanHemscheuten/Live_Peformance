@@ -44,11 +44,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateCoaltion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateCoaltion.Designer.cs">
+      <DependentUpon>CreateCoaltion.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateEllection.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreateEllection.Designer.cs">
       <DependentUpon>CreateEllection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateParty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateParty.Designer.cs">
+      <DependentUpon>CreateParty.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI.cs">
       <SubType>Form</SubType>
@@ -58,8 +70,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreateCoaltion.resx">
+      <DependentUpon>CreateCoaltion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateEllection.resx">
       <DependentUpon>CreateEllection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateParty.resx">
+      <DependentUpon>CreateParty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI.resx">
       <DependentUpon>GUI.cs</DependentUpon>
